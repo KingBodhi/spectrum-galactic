@@ -203,6 +203,7 @@ export default function Header() {
             </div>
             <span className="text-xl font-bold text-gradient-cyan">SPECTRUM</span>
           </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
