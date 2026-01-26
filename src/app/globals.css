@@ -1,26 +1,332 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ============================================
+     SOVEREIGN STACK UNIFIED DESIGN TOKENS
+     ============================================ */
+
+  /* Alpha Protocol - Deep Blue (Protocol Foundation) */
+  --alpha-primary: #1e40af;
+  --alpha-accent: #3b82f6;
+  --alpha-light: #60a5fa;
+  --alpha-dark: #1e3a8a;
+
+  /* Omega Wireless - Electric Blue (Hardware Foundation) */
+  --omega-primary: #00aaff;
+  --omega-accent: #0088cc;
+  --omega-light: #4dc3ff;
+  --omega-dark: #006699;
+
+  /* PCG Dashboard - Emerald (Sovereign OS Interface) */
+  --pcg-primary: #10b981;
+  --pcg-accent: #059669;
+  --pcg-light: #34d399;
+  --pcg-dark: #047857;
+
+  /* Pythia AI - Purple (Emergent Intelligence) */
+  --pythia-primary: #8b5cf6;
+  --pythia-accent: #7c3aed;
+  --pythia-light: #a78bfa;
+  --pythia-dark: #6d28d9;
+
+  /* VIBE Token - Gold (Ecosystem Rewards) */
+  --vibe-primary: #f59e0b;
+  --vibe-accent: #d97706;
+  --vibe-light: #fbbf24;
+  --vibe-dark: #b45309;
+
+  /* Spectrum Galactic - Cyan (Global Connectivity) */
+  --spectrum-primary: #00d4ff;
+  --spectrum-accent: #0ea5e9;
+  --spectrum-light: #38bdf8;
+  --spectrum-dark: #0284c7;
+  /* Legacy aliases */
+  --spectrum-cyan: #00d4ff;
+  --spectrum-blue: #4169e1;
+  --spectrum-purple: #8b5cf6;
+  --spectrum-pink: #ec4899;
+
+  /* Sovereign Stack Gold (Ecosystem Unity) */
+  --sovereign-gold: #C9A227;
+  --sovereign-gold-light: #E8D48A;
+  --sovereign-gold-dark: #8B7119;
+  /* Legacy aliases */
+  --gold: #C9A227;
+  --gold-light: #E8D48A;
+
+  /* Space Theme - Deep blues and cosmic colors */
+  --space-black: #050510;
+  --space-deep: #0a0a1a;
+  --space-blue: #0d1b2a;
+  --space-surface: #1b263b;
+  --space-border: #2d3a4f;
+
+  /* Shared Neutral Palette */
+  --bg-primary: #050510;
+  --bg-secondary: #0a0a1a;
+  --bg-surface: #1b263b;
+  --bg-card: #1b263b;
+  --bg-elevated: #2d3a4f;
+
+  --border-default: #2d3a4f;
+  --border-subtle: #1f2937;
+  --border-strong: #3d4a5f;
+
+  /* Signal colors / Status */
+  --signal-green: #22c55e;
+  --signal-yellow: #eab308;
+  --signal-red: #ef4444;
+  --status-success: #22c55e;
+  --status-success-bg: rgba(34, 197, 94, 0.1);
+  --status-warning: #eab308;
+  --status-warning-bg: rgba(234, 179, 8, 0.1);
+  --status-error: #ef4444;
+  --status-error-bg: rgba(239, 68, 68, 0.1);
+  --status-info: #3b82f6;
+  --status-info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-subtle: #475569;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--space-black);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--space-black);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Starfield background */
+.starfield {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, white, transparent),
+    radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 230px 80px, white, transparent),
+    radial-gradient(2px 2px at 300px 150px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 350px 200px, white, transparent),
+    radial-gradient(2px 2px at 420px 50px, rgba(255,255,255,0.8), transparent);
+  background-size: 500px 300px;
+  background-color: var(--space-black);
+}
+
+/* Animated gradient background */
+.cosmic-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--space-black) 0%,
+    var(--space-deep) 25%,
+    var(--space-blue) 50%,
+    var(--space-deep) 75%,
+    var(--space-black) 100%
+  );
+  background-size: 400% 400%;
+  animation: cosmicPulse 15s ease infinite;
+}
+
+@keyframes cosmicPulse {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Orbit animation for satellites */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+.satellite-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Signal pulse animation */
+@keyframes signalPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.signal-pulse {
+  animation: signalPulse 2s ease-in-out infinite;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.3), 0 0 40px rgba(65, 105, 225, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+}
+
+/* Text gradients */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-space {
+  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-purple) 50%, var(--spectrum-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sovereign {
+  background: linear-gradient(135deg, var(--sovereign-gold-light) 0%, var(--sovereign-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card styles */
+.card {
+  background: var(--space-surface);
+  border: 1px solid var(--space-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--spectrum-cyan);
+  transform: translateY(-2px);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-blue) 100%);
+  color: var(--space-black);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--spectrum-cyan);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--spectrum-cyan);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--spectrum-cyan);
+  color: var(--space-black);
+}
+
+/* Satellite icon */
+.satellite-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--spectrum-cyan), var(--spectrum-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.satellite-icon::before,
+.satellite-icon::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background: linear-gradient(90deg, transparent, var(--spectrum-cyan), transparent);
+  border-radius: 4px;
+}
+
+.satellite-icon::before {
+  transform: rotate(45deg);
+}
+
+.satellite-icon::after {
+  transform: rotate(-45deg);
+}
+
+/* Earth representation */
+.earth-visual {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0d2137 50%, #051525 100%);
+  box-shadow:
+    inset -20px -20px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(0, 212, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.earth-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 30% at 30% 30%, rgba(100, 200, 150, 0.3), transparent),
+    radial-gradient(ellipse 80% 40% at 60% 60%, rgba(100, 200, 150, 0.2), transparent);
+}
+
+/* Coverage grid animation */
+@keyframes coverageSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.coverage-sweep {
+  animation: coverageSweep 3s ease-in-out infinite;
+}
+
+/* Connection line animation */
+@keyframes connectionPulse {
+  0%, 100% { stroke-dashoffset: 0; opacity: 0.5; }
+  50% { stroke-dashoffset: 20; opacity: 1; }
+}
+
+.connection-line {
+  stroke-dasharray: 10 5;
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+/* Status indicators */
+.status-online {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal-green);
+  animation: signalPulse 2s ease-in-out infinite;
+}
+
+.status-offline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal-red);
 }
