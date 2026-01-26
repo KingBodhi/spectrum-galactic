@@ -26,14 +26,14 @@ const ecosystemProjects = [
     id: "pythia",
     name: "Pythia AI",
     description: "Emergent Intelligence",
-    url: "https://pythia-ai.xyz",
+    url: "https://pythia-ai-web.vercel.app",
     color: "#8b5cf6",
   },
   {
     id: "vibe",
     name: "VIBE Token",
     description: "Ecosystem Rewards",
-    url: "https://vibetoken.xyz",
+    url: "https://vibe-token.vercel.app",
     color: "#f59e0b",
   },
   {
