@@ -3,46 +3,47 @@
 :root {
   /* ============================================
      SOVEREIGN STACK UNIFIED DESIGN TOKENS
+     Rainbow Colors for Ecosystem Projects
      ============================================ */
 
-  /* Alpha Protocol - Deep Blue (Protocol Foundation) */
-  --alpha-primary: #1e40af;
-  --alpha-accent: #3b82f6;
-  --alpha-light: #60a5fa;
-  --alpha-dark: #1e3a8a;
+  /* Alpha Protocol - Red (Protocol Foundation) */
+  --alpha-primary: #dc2626;
+  --alpha-accent: #ef4444;
+  --alpha-light: #f87171;
+  --alpha-dark: #b91c1c;
 
-  /* Omega Wireless - Electric Blue (Hardware Foundation) */
-  --omega-primary: #00aaff;
-  --omega-accent: #0088cc;
-  --omega-light: #4dc3ff;
-  --omega-dark: #006699;
+  /* Omega Wireless - Orange (Hardware Foundation) */
+  --omega-primary: #f97316;
+  --omega-accent: #ea580c;
+  --omega-light: #fb923c;
+  --omega-dark: #c2410c;
 
-  /* PCG Dashboard - Emerald (Sovereign OS Interface) */
-  --pcg-primary: #10b981;
-  --pcg-accent: #059669;
-  --pcg-light: #34d399;
-  --pcg-dark: #047857;
+  /* Vibertas - Yellow (Sovereign OS Interface) */
+  --vibertas-primary: #eab308;
+  --vibertas-accent: #ca8a04;
+  --vibertas-light: #facc15;
+  --vibertas-dark: #a16207;
 
-  /* Pythia AI - Purple (Emergent Intelligence) */
-  --pythia-primary: #8b5cf6;
-  --pythia-accent: #7c3aed;
-  --pythia-light: #a78bfa;
-  --pythia-dark: #6d28d9;
+  /* Pythia AI - Blue (Emergent Intelligence) */
+  --pythia-primary: #3b82f6;
+  --pythia-accent: #2563eb;
+  --pythia-light: #60a5fa;
+  --pythia-dark: #1d4ed8;
 
-  /* VIBE Token - Gold (Ecosystem Rewards) */
-  --vibe-primary: #f59e0b;
-  --vibe-accent: #d97706;
-  --vibe-light: #fbbf24;
-  --vibe-dark: #b45309;
+  /* VIBE Token - Green (Ecosystem Rewards) */
+  --vibe-primary: #22c55e;
+  --vibe-accent: #16a34a;
+  --vibe-light: #4ade80;
+  --vibe-dark: #15803d;
 
-  /* Spectrum Galactic - Cyan (Global Connectivity) */
-  --spectrum-primary: #00d4ff;
-  --spectrum-accent: #0ea5e9;
-  --spectrum-light: #38bdf8;
-  --spectrum-dark: #0284c7;
+  /* Spectrum Galactic - Purple (Global Connectivity) - PRIMARY */
+  --spectrum-primary: #8b5cf6;
+  --spectrum-accent: #7c3aed;
+  --spectrum-light: #a78bfa;
+  --spectrum-dark: #6d28d9;
   /* Legacy aliases */
-  --spectrum-cyan: #00d4ff;
-  --spectrum-blue: #4169e1;
+  --spectrum-cyan: #8b5cf6;
+  --spectrum-blue: #7c3aed;
   --spectrum-purple: #8b5cf6;
   --spectrum-pink: #ec4899;
 
@@ -61,7 +62,7 @@
   --space-surface: #1b263b;
   --space-border: #2d3a4f;
 
-  /* Shared Neutral Palette */
+  /* Shared Neutral Palette - Dark Mode (Default) */
   --bg-primary: #050510;
   --bg-secondary: #0a0a1a;
   --bg-surface: #1b263b;
@@ -85,11 +86,103 @@
   --status-info: #3b82f6;
   --status-info-bg: rgba(59, 130, 246, 0.1);
 
-  /* Text */
+  /* Text - Dark Mode */
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   --text-subtle: #475569;
+}
+
+/* Light Mode Support */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Light Mode Backgrounds */
+    --space-black: #ffffff;
+    --space-deep: #f8fafc;
+    --space-blue: #f1f5f9;
+    --space-surface: #e2e8f0;
+    --space-border: #cbd5e1;
+
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-surface: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-elevated: #e2e8f0;
+
+    --border-default: #cbd5e1;
+    --border-subtle: #e2e8f0;
+    --border-strong: #94a3b8;
+
+    /* Text - Light Mode */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --text-subtle: #94a3b8;
+
+    /* Adjusted status backgrounds for light mode */
+    --status-success-bg: rgba(34, 197, 94, 0.15);
+    --status-warning-bg: rgba(234, 179, 8, 0.15);
+    --status-error-bg: rgba(239, 68, 68, 0.15);
+    --status-info-bg: rgba(59, 130, 246, 0.15);
+  }
+}
+
+/* Manual dark mode class override */
+.dark {
+  --space-black: #050510;
+  --space-deep: #0a0a1a;
+  --space-blue: #0d1b2a;
+  --space-surface: #1b263b;
+  --space-border: #2d3a4f;
+
+  --bg-primary: #050510;
+  --bg-secondary: #0a0a1a;
+  --bg-surface: #1b263b;
+  --bg-card: #1b263b;
+  --bg-elevated: #2d3a4f;
+
+  --border-default: #2d3a4f;
+  --border-subtle: #1f2937;
+  --border-strong: #3d4a5f;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-subtle: #475569;
+
+  --status-success-bg: rgba(34, 197, 94, 0.1);
+  --status-warning-bg: rgba(234, 179, 8, 0.1);
+  --status-error-bg: rgba(239, 68, 68, 0.1);
+  --status-info-bg: rgba(59, 130, 246, 0.1);
+}
+
+/* Manual light mode class override */
+.light {
+  --space-black: #ffffff;
+  --space-deep: #f8fafc;
+  --space-blue: #f1f5f9;
+  --space-surface: #e2e8f0;
+  --space-border: #cbd5e1;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-surface: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-elevated: #e2e8f0;
+
+  --border-default: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --border-strong: #94a3b8;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  --status-success-bg: rgba(34, 197, 94, 0.15);
+  --status-warning-bg: rgba(234, 179, 8, 0.15);
+  --status-error-bg: rgba(239, 68, 68, 0.15);
+  --status-info-bg: rgba(59, 130, 246, 0.15);
 }
 
 @theme inline {
@@ -159,29 +252,29 @@ body {
   animation: signalPulse 2s ease-in-out infinite;
 }
 
-/* Glow effects */
+/* Glow effects - Updated for purple primary */
 .glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
 }
 
 .glow-blue {
-  box-shadow: 0 0 20px rgba(65, 105, 225, 0.3), 0 0 40px rgba(65, 105, 225, 0.1);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(124, 58, 237, 0.1);
 }
 
 .glow-purple {
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
 }
 
-/* Text gradients */
+/* Text gradients - Updated for purple primary */
 .text-gradient-cyan {
-  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-blue) 100%);
+  background: linear-gradient(135deg, var(--spectrum-primary) 0%, var(--spectrum-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-space {
-  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-purple) 50%, var(--spectrum-pink) 100%);
+  background: linear-gradient(135deg, var(--spectrum-light) 0%, var(--spectrum-primary) 50%, var(--spectrum-pink) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,7 +287,22 @@ body {
   background-clip: text;
 }
 
-/* Card styles */
+/* Rainbow gradient for SS ecosystem */
+.text-gradient-rainbow {
+  background: linear-gradient(135deg,
+    var(--alpha-primary) 0%,
+    var(--omega-primary) 17%,
+    var(--vibertas-primary) 33%,
+    var(--pythia-primary) 50%,
+    var(--vibe-primary) 67%,
+    var(--spectrum-primary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card styles - Updated for purple primary */
 .card {
   background: var(--space-surface);
   border: 1px solid var(--space-border);
@@ -204,14 +312,14 @@ body {
 }
 
 .card:hover {
-  border-color: var(--spectrum-cyan);
+  border-color: var(--spectrum-primary);
   transform: translateY(-2px);
 }
 
-/* Button styles */
+/* Button styles - Updated for purple primary */
 .btn-primary {
-  background: linear-gradient(135deg, var(--spectrum-cyan) 0%, var(--spectrum-blue) 100%);
-  color: var(--space-black);
+  background: linear-gradient(135deg, var(--spectrum-primary) 0%, var(--spectrum-dark) 100%);
+  color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -222,31 +330,31 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--spectrum-cyan);
+  color: var(--spectrum-primary);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--spectrum-cyan);
+  border: 1px solid var(--spectrum-primary);
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none;
 }
 
 .btn-secondary:hover {
-  background: var(--spectrum-cyan);
-  color: var(--space-black);
+  background: var(--spectrum-primary);
+  color: white;
 }
 
-/* Satellite icon */
+/* Satellite icon - Updated for purple primary */
 .satellite-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--spectrum-cyan), var(--spectrum-blue));
+  background: linear-gradient(135deg, var(--spectrum-primary), var(--spectrum-dark));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -260,7 +368,7 @@ body {
   position: absolute;
   width: 80px;
   height: 20px;
-  background: linear-gradient(90deg, transparent, var(--spectrum-cyan), transparent);
+  background: linear-gradient(90deg, transparent, var(--spectrum-primary), transparent);
   border-radius: 4px;
 }
 
@@ -280,7 +388,7 @@ body {
   background: linear-gradient(135deg, #1e3a5f 0%, #0d2137 50%, #051525 100%);
   box-shadow:
     inset -20px -20px 40px rgba(0, 0, 0, 0.5),
-    0 0 60px rgba(0, 212, 255, 0.2);
+    0 0 60px rgba(139, 92, 246, 0.2);
   position: relative;
   overflow: hidden;
 }
