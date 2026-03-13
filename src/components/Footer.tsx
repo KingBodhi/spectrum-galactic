@@ -4,31 +4,31 @@ const ecosystemProjects = [
   {
     id: "alpha",
     name: "Alpha Protocol",
-    url: "https://alpha-protocol-web.vercel.app",
+    url: "https://alphaprotocol.network",
     color: "#dc2626",
   },
   {
     id: "omega",
     name: "Omega Wireless",
-    url: "https://omega-wireless.vercel.app",
+    url: "https://omegawireless.xyz",
     color: "#f97316",
   },
   {
     id: "vibertas",
     name: "Vibertas",
-    url: "https://vibertas-os.vercel.app",
+    url: "https://vibertas.com",
     color: "#eab308",
   },
   {
     id: "vibe",
     name: "VIBE Token",
-    url: "https://vibe-token.vercel.app",
+    url: "https://vibetoken.xyz",
     color: "#22c55e",
   },
   {
-    id: "pythia",
-    name: "Pythia AI",
-    url: "https://pythia-ai-web.vercel.app",
+    id: "vibeland",
+    name: "VIBELAND",
+    url: "https://vibeland.com",
     color: "#3b82f6",
   },
   {
@@ -37,6 +37,12 @@ const ecosystemProjects = [
     url: "#",
     color: "#8b5cf6",
     current: true,
+  },
+  {
+    id: "pythia",
+    name: "Pythia AI",
+    url: "https://pythia-ai.xyz",
+    color: "#6366f1",
   },
 ];
 

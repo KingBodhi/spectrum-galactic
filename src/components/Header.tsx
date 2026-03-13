@@ -17,45 +17,40 @@ const ecosystemProjects = [
     name: "Alpha Protocol",
     shortName: "Alpha",
     description: "Protocol Foundation - Enabling P2P Connections",
-    url: "https://alpha-protocol-web.vercel.app",
+    url: "https://alphaprotocol.network",
     color: "#dc2626",
-    layer: "Layer 0",
   },
   {
     id: "omega",
     name: "Omega Wireless",
     shortName: "Omega",
     description: "Hardware Foundation - Physical Access Points",
-    url: "https://omega-wireless.vercel.app",
+    url: "https://omegawireless.xyz",
     color: "#f97316",
-    layer: "Layer 1",
   },
   {
     id: "vibertas",
     name: "Vibertas",
     shortName: "Viber",
     description: "Sovereign OS - Your Interface to the Mesh",
-    url: "https://vibertas-os.vercel.app",
+    url: "https://vibertas.com",
     color: "#eab308",
-    layer: "OS Layer",
   },
   {
     id: "vibe",
     name: "VIBE Token",
     shortName: "VIBE",
     description: "Ecosystem Rewards - Value for Contributors",
-    url: "https://vibe-token.vercel.app",
+    url: "https://vibetoken.xyz",
     color: "#22c55e",
-    layer: "Economics",
   },
   {
-    id: "pythia",
-    name: "Pythia AI",
-    shortName: "Pythia",
-    description: "Emergent AI - Powered by the Ecosystem",
-    url: "https://pythia-ai.vercel.app",
+    id: "vibeland",
+    name: "VIBELAND",
+    shortName: "VIBELAND",
+    description: "The Sovereign Metaverse - Immersive 3D Worlds",
+    url: "https://vibeland.com",
     color: "#3b82f6",
-    layer: "Intelligence",
   },
   {
     id: "spectrum",
@@ -64,7 +59,14 @@ const ecosystemProjects = [
     description: "Global Reach - Satellite Coverage Extension",
     url: "#",
     color: "#8b5cf6",
-    layer: "Connectivity",
+  },
+  {
+    id: "pythia",
+    name: "Pythia AI",
+    shortName: "Pythia",
+    description: "Emergent AI - Powered by the Ecosystem",
+    url: "https://pythia-ai.xyz",
+    color: "#6366f1",
   },
 ];
 
@@ -156,12 +158,6 @@ export default function Header() {
                             <p className="text-xs text-[var(--text-muted)] mt-0.5 truncate">
                               {project.description}
                             </p>
-                            <span
-                              className="text-[10px] font-medium mt-1 inline-block"
-                              style={{ color: project.color }}
-                            >
-                              {project.layer}
-                            </span>
                           </div>
                           {project.id !== "spectrum" && (
                             <svg
@@ -293,7 +289,7 @@ export default function Header() {
                               <span className="px-1.5 py-0.5 rounded text-[9px] bg-[var(--status-success-bg)] text-[var(--status-success)]">Current</span>
                             )}
                           </div>
-                          <span className="text-[10px] font-medium" style={{ color: project.color }}>{project.layer}</span>
+                          <span className="text-[10px] text-[var(--text-muted)]">{project.description}</span>
                         </div>
                       </a>
                     ))}
